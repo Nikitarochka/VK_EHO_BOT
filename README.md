@@ -23,19 +23,16 @@
    cd vk-bot
 
 Создайте файл .env в корне проекта и заполните его следующим образом (файл не должен попадать в репозиторий):
-
-dotenv
-Копировать
-VK_GROUP_TOKEN=your_vk_group_token_here
-VK_GROUP_ID=your_vk_group_id_here
-DATABASE_URL=postgresql+psycopg2://postgres:postgres@db:5432/vk_bot_db
-RESET_DB=false
+- VK_GROUP_TOKEN=your_vk_group_token_here
+- VK_GROUP_ID=your_vk_group_id_here
+- DATABASE_URL=postgresql+psycopg2://postgres:postgres@db:5432/vk_bot_db
+- RESET_DB=false
 
 , где
-VK_GROUP_TOKEN – токен вашего сообщества (убедитесь, что он имеет права на работу с сообщениями, фотографиями и документами).
-VK_GROUP_ID – идентификатор вашего сообщества.
-DATABASE_URL – строка подключения к PostgreSQL.
-RESET_DB – если установлено в true, база данных будет очищаться при запуске.
+- VK_GROUP_TOKEN – токен вашего сообщества (убедитесь, что он имеет права на работу с сообщениями, фотографиями и документами).
+- VK_GROUP_ID – идентификатор вашего сообщества.
+- DATABASE_URL – строка подключения к PostgreSQL.
+- RESET_DB – если установлено в true, база данных будет очищаться при запуске.
 
 Запустите контейнеры:
 docker-compose up --build
